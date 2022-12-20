@@ -30,6 +30,6 @@ export class ProdutosService {
   }
 
   findOne(idProduto: number) {
-    return this.produtoRepository.findBy({ idProduto });
+    return this.produtoRepository.findOneBy({ idProduto });
   }
 }

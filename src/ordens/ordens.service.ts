@@ -46,6 +46,6 @@ export class OrdensService {
   }
 
   findOne(idTransacao: number) {
-    return this.ordemRepository.findBy({ idTransacao });
+    return this.ordemRepository.findOneBy({ idTransacao });
   }
 }

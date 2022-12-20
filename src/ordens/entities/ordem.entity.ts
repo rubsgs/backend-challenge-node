@@ -14,11 +14,11 @@ export class Ordem {
   @PrimaryColumn()
   idTransacao: number;
 
-  @ManyToOne(() => Cliente)
+  @ManyToOne(() => Cliente, { eager: true })
   @JoinColumn({ name: 'idCliente' })
   cliente: Cliente;
 
-  @ManyToOne(() => Produto)
+  @ManyToOne(() => Produto, { eager: true })
   @JoinColumn({ name: 'idProduto' })
   produto: Produto;
 
